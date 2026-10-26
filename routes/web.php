@@ -16,10 +16,14 @@ Route::get('/', function () {
 // ==============================
 // DATA ANGGOTA
 // ==============================
+
 Route::get('/anggota', [AnggotaController::class, 'index']);
 Route::get('/anggota/tambah', [AnggotaController::class, 'create']);
 Route::post('/anggota', [AnggotaController::class, 'store']);
+Route::get('/anggota/{id}/edit', [AnggotaController::class, 'edit']);
+Route::put('/anggota/{id}', [AnggotaController::class, 'update']);
 Route::delete('/anggota/{id}', [AnggotaController::class, 'destroy']);
+
 
 // ==============================
 // DATA SIMPANAN
